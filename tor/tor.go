@@ -246,7 +246,7 @@ func (t *Tor) startProcess(ctx context.Context, conf *StartConf) error {
 		args = append(args, "--DisableNetwork", "1")
 	}
 	if !conf.NoHush {
-		args = append(args, "--hush")
+		args = append(args, "--quiet")
 	}
 	if !conf.NoAutoSocksPort {
 		args = append(args, "--SocksPort", "auto")
